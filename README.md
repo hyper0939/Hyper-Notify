@@ -2,6 +2,16 @@
 
 <img width="453" height="172" alt="image" src="https://github.com/user-attachments/assets/e839761d-949a-4feb-8d70-4c25056c338e" />
 
+# Features:
+- Queue System
+- Automatic removal
+- Progress Bar Animation
+- Different types: Info, Success, Warning, Error
+- Border + Progress bar + Glow color depending on type
+- Exports
+- TriggerEvent Support
+- Server & Client Support
+
 ### Types:
 ##### **Types = Info, Success, Warning, Error**
 

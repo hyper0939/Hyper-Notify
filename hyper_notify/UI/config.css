@@ -1,0 +1,11 @@
+:root {
+    --Info-color: #afafff;
+    --Success-color: #52ff8a;
+    --Warning-color: #ffb347;
+    --Error-color: #ff5c5c;
+    
+    --Progressbar-Info-color: #afafff;
+    --Progressbar-Success-color: #52ff8a;
+    --Progressbar-Warning-color: #ffb347;
+    --Progressbar-Error-color: #ff5c5c;
+}

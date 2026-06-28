@@ -40,25 +40,6 @@
     overflow-y: auto;
 }
 
-.Bg::-webkit-scrollbar {
-    width: 5px;
-}
-
-.Bg::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 5px;
-}
-
-.Bg::-webkit-scrollbar-thumb {
-    background: #464668;
-    border-radius: 5px;
-    cursor: all-scroll;
-}
-
-.Bg::-webkit-scrollbar-thumb:hover {
-    background: #AFAFFF;
-}
-
 .NotifyFrame {
     position: relative;
     display: flex;
@@ -76,35 +57,35 @@
 
 /* Colors */
 .NotifyFrame.Info {
-    border-color: #afafff;
+    border-color: var(--Info-color);
 }
 
 .NotifyFrame.Success {
-    border-color: #52ff8a;
+    border-color: var(--Success-color);
 }
 
 .NotifyFrame.Warning {
-    border-color: #ffb347;
+    border-color: var(--Warning-color);
 }
 
 .NotifyFrame.Error {
-    border-color: #ff5c5c;
+    border-color: var(--Error-color);
 }
 
 .NotifyFrame.Info .Progressbar {
-    background: #afafff;
+    background: var(--Progressbar-Info-color);
 }
 
 .NotifyFrame.Success .Progressbar {
-    background: #52ff8a;
+    background: var(--Progressbar-Success-color);
 }
 
 .NotifyFrame.Warning .Progressbar {
-    background: #ffb347;
+    background: var(--Progressbar-Warning-color);
 }
 
 .NotifyFrame.Error .Progressbar {
-    background: #ff5c5c;
+    background: var(--Progressbar-Error-color);
 }
 
 .Title {
