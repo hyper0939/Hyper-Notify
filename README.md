@@ -25,3 +25,8 @@
 
 ## **Trigger Events (Server Side)**:
 ##### TriggerClientEvent("hyper_notify:Show", playerId, title, message, type, duration)
+
+# TODO:
+- Smaller Bg
+- SFX
+- Maybe announce
