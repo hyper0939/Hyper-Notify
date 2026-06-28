@@ -38,5 +38,5 @@
 
 # TODO:
 - Smaller Bg
-- SFX
+- SFX <= Done
 - Maybe announce
