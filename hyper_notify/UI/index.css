@@ -19,10 +19,6 @@
     -webkit-user-drag: none;
 }
 
-body {
-    background-color: rgb(15, 15, 15);
-}
-
 .Bg {
     position: absolute;
 
@@ -33,7 +29,6 @@ body {
 
     width: 460px;
     height: 100%;
-    border: 1px solid #fff;
 
     padding: 10px;
 
