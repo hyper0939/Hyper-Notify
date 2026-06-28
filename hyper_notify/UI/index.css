@@ -27,7 +27,7 @@
     right: 0%;
     top: 0%;
 
-    width: 460px;
+    width: 300px;
     height: 100%;
 
     padding: 6px;
@@ -45,7 +45,7 @@
     display: flex;
     transition: 250ms;
 
-    width: 390px;
+    width: 280px;
     height: 140px;
 
     background: #293032;
@@ -94,7 +94,7 @@
     align-content: center;
     transition: 250ms;
 
-    width: 390px;
+    width: 280px;
     height: 32px;
 
     font-family: "Gilroy";
@@ -112,7 +112,7 @@
     align-content: center;
     transition: 250ms;
 
-    width: 370px;
+    width: 257px;
     height: 70px;
 
     font-family: "Gilroy-Bold";
@@ -132,7 +132,7 @@
     transition: 250ms;
 
     border-radius: 10px;
-    width: 370px;
+    width: 257px;
     height: 20px;
     background: rgba(217, 217, 217, 0.1);
 }
