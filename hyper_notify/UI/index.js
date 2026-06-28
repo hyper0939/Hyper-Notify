@@ -1,15 +1,16 @@
 $(document).ready(function() {
 
     window.addEventListener("message", function(event) {
-        const data = event.data;
+        let data = event.data;
 
         if (data.action === "Show") {
-            
+            CreateNotify(data);
         }
-    })
-})
+    });
+});
 
 function CreateNotify(data) {
+    $(".Bg").html("");
     const id = "notify_" + Date.now() + Math.floor(Math.random() * 10000)
 
     const notify = $(`
