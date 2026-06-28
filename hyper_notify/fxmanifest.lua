@@ -2,7 +2,7 @@ fx_version "cerulean"
 game "gta5"
 
 author "Hyper"
-version "0.0.2"
+version "0.0.1"
 
 client_scripts {
     "Code/client-side.lua",
