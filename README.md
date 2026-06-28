@@ -11,6 +11,7 @@
 - Exports
 - TriggerEvent Support
 - Server & Client Support
+- SFX
 
 ### Types:
 ##### **Types = Info, Success, Warning, Error**
