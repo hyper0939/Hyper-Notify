@@ -23,5 +23,6 @@ files {
     "UI/*.css",
     "UI/fonts/*.otf",
     "UI/fonts/*.woff",
-    "UI/*.js"
+    "UI/*.js",
+    "UI/Sounds/*.mp3"
 }

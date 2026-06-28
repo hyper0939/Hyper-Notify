@@ -6,6 +6,8 @@ const SOUNDS = {
 }
 
 $(document).ready(function() {
+    $(".Bg").empty();
+
     window.addEventListener("message", function(event) {
         let data = event.data;
 
@@ -23,7 +25,6 @@ function PlaySound(type) {
 }
 
 function CreateNotify(data) {
-    $(".Bg").html("");
     const id = "notify_" + Date.now() + Math.floor(Math.random() * 10000)
 
     PlaySound(data.type);
