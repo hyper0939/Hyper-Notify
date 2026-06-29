@@ -12,6 +12,7 @@
 - TriggerEvent Support
 - Server & Client Support
 - SFX
+- Announce System
 
 ### Types:
 ##### **Types = Info, Success, Warning, Error**
