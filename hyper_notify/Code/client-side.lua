@@ -30,6 +30,16 @@ RegisterNetEvent("hyper_notify:Show", function(title, message, type, duration)
     Notify(title, message, type, duration)
 end)
 
+RegisterNetEvent("hyper_notify:Announce", function(title, message, duration)
+    SendNUIMessage({
+        action = "Announce",
+        title = title,
+        message = message,
+        duration = duration or Config.AnnounceDefaultDuration,
+        sound = Config.AnnounceSound
+    })
+end)
+
 RegisterCommand("testnotifys", function()
     exports[GetCurrentResourceName()]:Info("Info", "Test message...", 3500)
     exports[GetCurrentResourceName()]:Success("Success", "Test message...", 3500)

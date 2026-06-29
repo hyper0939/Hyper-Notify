@@ -8,4 +8,9 @@
     --Progressbar-Success-color: #52ff8a;
     --Progressbar-Warning-color: #ffb347;
     --Progressbar-Error-color: #ff5c5c;
+
+    --Announce-border-color: 1.5px solid #AFAFFF;
+    --Announce-background-color: #293032;
+    --Announce-progressbar-bg-background-color: rgba(217, 217, 217, 0.1);
+    --Announce-progressbar-background-color: #afafff;
 }

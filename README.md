@@ -37,7 +37,12 @@
 ## **Trigger Events (Server Side)**:
 ##### TriggerClientEvent("hyper_notify:Show", playerId, title, message, type, duration)
 
+# Announce
+### Authorize group
+add_ace group.admin hyper_notify.announce allow
+
+### Authorize individual players
+add_ace identifier.license:xxxxxx hyper_notify.announce allow
+
 # TODO:
-- Smaller Bg <= Done
-- SFX <= Done
-- Maybe announce
+- Cooldown (announce)

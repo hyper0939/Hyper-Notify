@@ -4,6 +4,53 @@ end
 
 exports("Notify", Notify)
 
+
+-- // Announce \\ --
+local function HasAnnouncePermission(source)
+    if IsPlayerAceAllowed(source, Config.AceAllowedName) then
+        return true
+    end
+
+    local license = GetPlayerIdentifierByType(source, "license")
+    if license and Config.AnnounceAllowedLicenses[license] then
+        return true
+    end
+
+    return false
+end
+
+RegisterCommand(Config.AnnounceCommandName, function(source, args)
+    print("Command")
+
+    if source == 0 then
+        local title = args[1] or Config.Language["no_title"]
+        local hasDuration = tonumber(args[#args]) ~= nil
+        local duration = tonumber(args[#args]) or Config.AnnounceDefaultDuration
+        local message = table.concat(args, " ", 2, hasDuration and (#args - 1) or #args)
+
+        TriggerClientEvent("hyper_notify:Announce", -1, title, message, duration)
+
+        return
+    end
+
+    if not HasAnnouncePermission(source) then
+        Notify(source, Config.Language["no_permission_title"], Config.Language["no_permission"], "Error", 5000)
+        return
+    end
+
+    if #args < 2 then
+        Notify(source, Config.Language["wrong_command_title"], Config.Language["no_permission"], "Warning", 5000)
+        return
+    end
+
+    local title = args[1]
+    local duration = tonumber(args[#args]) or Config.AnnounceDefaultDuration
+    local hasDuration = tonumber(args[#args]) ~= nil
+    local message = table.concat(args, " ", 2, hasDuration and (#args - 1) or #args)
+
+    TriggerClientEvent("hyper_notify:Announce", -1, title, message, duration)
+end, false)
+
 -- // Github \\ --
 local ResourceName = GetCurrentResourceName()
 

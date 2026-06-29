@@ -7,12 +7,15 @@ const SOUNDS = {
 
 $(document).ready(function() {
     $(".Bg").empty();
+    $(".AnnounceBg").empty();
 
     window.addEventListener("message", function(event) {
         let data = event.data;
 
         if (data.action === "Show") {
             CreateNotify(data);
+        } else if (data.action === "Announce") {
+            CreateAnnounce(data);
         }
     });
 });
@@ -46,15 +49,54 @@ function CreateNotify(data) {
         transition: `width ${data.duration}ms linear`
     });
 
-    setTimeout(function() {
-        notify.find(".Progressbar").css("width", "0%");
-    }, 20);
+    requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+            notify.find(".Progressbar").css("width", "0%");
+        });
+    });
 
     setTimeout(function() {
         notify.css("animation", "SlideOutRight .45s forwards");
 
         setTimeout(function() {
             notify.remove();
+        }, 450);
+    }, data.duration);
+}
+
+function CreateAnnounce(data) {
+    const id = "announce_" + Date.now() + Math.floor(Math.random() * 10000)
+
+    PlaySound(data.sound ?? "Warning");
+
+    const announce = $(`
+        <div class="AnnounceFrame" id="${id}">
+            <label class="AnnounceTitle">${data.title}</label>
+            <label class="AnnounceMessage">${data.message}</label>
+            <div class="AnnounceProgressbarBg">
+                <div class="AnnounceProgressbar"></div>
+            </div>
+        </div>
+    `);
+
+    $(".AnnounceBg").append(announce);
+
+    announce.find(".AnnounceProgressbar").css({
+        width: "100%",
+        transition: `width ${data.duration}ms linear`
+    });
+
+    requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+            announce.find("AnnounceProgressbar").css("width", "0%");
+        });
+    });
+
+    setTimeout(function() {
+        announce.css("animation", "SlideOutTop .45s forwards");
+
+        setTimeout(function() {
+            announce.remove();
         }, 450);
     }, data.duration);
 }

@@ -141,7 +141,7 @@
     position: absolute;
     display: flex;
     
-    width: 10%;
+    width: 0%;
     height: 20px;
     border-radius: 10px;
 
@@ -152,6 +152,108 @@
     background: #afafff;
 }
 
+/* Announce */
+.AnnounceBg {
+    position: absolute;
+
+    transition: 250ms;
+
+    right: 35%;
+    top: 0%;
+
+    width: 628px;
+    height: 100%;
+
+    padding: 6px;
+
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+    overflow-y: auto;
+}
+
+.AnnounceFrame {
+    position: relative;
+    display: flex;
+    transition: 250ms;
+
+    width: 509px;
+    height: 140px;
+
+    background: var(--Announce-background-color);
+    backdrop-filter: blur(12px);
+    border: var(--Announce-border-color);
+
+    animation: SlideInTop .45s cubic-bezier(.2,.8,.2,1);
+}
+
+.AnnounceTitle {
+    position: absolute;
+
+    align-content: center;
+    transition: 250ms;
+
+    width: 509px;
+    height: 32px;
+
+    font-family: "Gilroy";
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+}
+
+.AnnounceMessage {
+    position: absolute;
+    left: 2.3%;
+    top: 24.5%;
+
+    align-content: center;
+    transition: 250ms;
+
+    width: 480px;
+    height: 70px;
+
+    font-family: "Gilroy-Bold";
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+}
+
+.AnnounceProgressbarBg {
+    position: absolute;
+    display: flex;
+    
+    bottom: 5%;
+    left: 2.3%;
+
+    transition: 250ms;
+
+    border-radius: 10px;
+    width: 480px;
+    height: 20px;
+    background: var(--Announce-progressbar-bg-background-color);
+}
+
+.AnnounceProgressbar {
+    position: absolute;
+    display: flex;
+    
+    width: 0%;
+    height: 20px;
+    border-radius: 10px;
+
+    bottom: 5%;
+
+    transition: width .3s linear;
+
+    background: var(--Announce-progressbar-background-color);
+}
+
+/* Animations */
 @keyframes SlideInRight {
     from {
         transform: translateX(120%);
@@ -172,6 +274,30 @@
 
     to {
         transform: translateX(120%);
+        opacity: 0;
+    }
+}
+
+@keyframes SlideInTop {
+    from {
+        transform: translateY(-120%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes SlideOutTop {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-120%);
         opacity: 0;
     }
 }
